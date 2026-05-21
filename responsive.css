@@ -1,0 +1,143 @@
+/* ==============================================
+   responsive.css  —  link AFTER style.css
+   Only tweaks font sizes & spacing per breakpoint.
+   Buttons are already fluid via width:100% + aspect-ratio.
+   ============================================== */
+
+/* ══════════════════════════════════════════
+   4K / Ultra-wide  (2560px +)
+   ══════════════════════════════════════════ */
+@media (min-width: 2560px) {
+  #calculator { max-width: 900px; }
+  #display    { font-size: 9rem; padding: 40px; }
+  #keys       { gap: 20px; padding: 50px; }
+  button      { font-size: 5rem; }
+}
+
+/* ══════════════════════════════════════════
+   QHD / 2K  (1440px – 2559px)
+   ══════════════════════════════════════════ */
+@media (min-width: 1440px) and (max-width: 2559px) {
+  #calculator { max-width: 680px; }
+  #display    { font-size: 7rem; padding: 30px; }
+  #keys       { gap: 15px; padding: 35px; }
+  button      { font-size: 3.8rem; }
+}
+
+/* ══════════════════════════════════════════
+   Full HD  (1080px – 1439px)
+   ══════════════════════════════════════════ */
+@media (min-width: 1080px) and (max-width: 1439px) {
+  #calculator { max-width: 560px; }
+  #display    { font-size: 5.5rem; padding: 24px; }
+  #keys       { gap: 12px; padding: 28px; }
+  button      { font-size: 3.2rem; }
+}
+
+/* ══════════════════════════════════════════
+   Large tablets — iPad Pro, Surface Pro  (≤ 1024px)
+   ══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  #calculator { max-width: 460px; }
+  #display    { font-size: 4.5rem; padding: 20px; }
+  #keys       { gap: 10px; padding: 24px; }
+  button      { font-size: 2.8rem; }
+}
+
+/* ══════════════════════════════════════════
+   Medium tablets — iPad, Galaxy Tab  (≤ 768px)
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  #calculator { max-width: 400px; }
+  #display    { font-size: 3.8rem; padding: 18px; }
+  #keys       { gap: 9px; padding: 20px; }
+  button      { font-size: 2.4rem; }
+}
+
+/* ══════════════════════════════════════════
+   Small tablets — iPad Mini, Kindle Fire  (≤ 600px)
+   ══════════════════════════════════════════ */
+@media (max-width: 600px) {
+  body        { align-items: flex-start; padding: 24px 16px; }
+  #calculator { max-width: 100%; border-radius: 20px; }
+  #display    { font-size: 3.2rem; padding: 16px; }
+  #keys       { gap: 7px; padding: 16px; }
+  button      { font-size: 2rem; }
+}
+
+/* ══════════════════════════════════════════
+   Large phones — iPhone 14 Pro Max, S23 Ultra  (≤ 430px)
+   ══════════════════════════════════════════ */
+@media (max-width: 430px) {
+  body        { padding: 16px 12px; }
+  #display    { font-size: 2.8rem; padding: 14px; }
+  #keys       { gap: 6px; padding: 14px; }
+  button      { font-size: 1.8rem; }
+}
+
+/* ══════════════════════════════════════════
+   Standard phones — iPhone 14, Pixel 7  (≤ 390px)
+   ══════════════════════════════════════════ */
+@media (max-width: 390px) {
+  #display    { font-size: 2.4rem; padding: 12px; }
+  #keys       { gap: 5px; padding: 12px; }
+  button      { font-size: 1.6rem; }
+}
+
+/* ══════════════════════════════════════════
+   Small phones — iPhone SE, Galaxy A13  (≤ 360px)
+   ══════════════════════════════════════════ */
+@media (max-width: 360px) {
+  #display    { font-size: 2rem; padding: 10px; }
+  #keys       { gap: 4px; padding: 10px; }
+  button      { font-size: 1.4rem; }
+}
+
+/* ══════════════════════════════════════════
+   Extra small — budget Androids  (≤ 320px)
+   ══════════════════════════════════════════ */
+@media (max-width: 320px) {
+  #display    { font-size: 1.7rem; padding: 8px; }
+  #keys       { gap: 3px; padding: 8px; }
+  button      { font-size: 1.2rem; }
+}
+
+/* ══════════════════════════════════════════
+   Foldables inner screen — Galaxy Z Fold  (≤ 280px)
+   ══════════════════════════════════════════ */
+@media (max-width: 280px) {
+  #display    { font-size: 1.4rem; padding: 7px; }
+  #keys       { gap: 3px; padding: 7px; }
+  button      { font-size: 1rem; }
+}
+
+/* ══════════════════════════════════════════
+   Landscape phones
+   ══════════════════════════════════════════ */
+@media (max-height: 430px) and (orientation: landscape) {
+  body        { align-items: flex-start; padding: 12px; }
+  #calculator { max-width: 420px; border-radius: 14px; }
+  #display    { font-size: 2rem; padding: 8px 14px; }
+  #keys       { gap: 5px; padding: 10px; }
+  button      { font-size: 1.5rem; }
+}
+
+@media (max-height: 360px) and (orientation: landscape) {
+  #display    { font-size: 1.6rem; padding: 6px 12px; }
+  #keys       { gap: 4px; padding: 8px; }
+  button      { font-size: 1.2rem; }
+}
+
+/* ══════════════════════════════════════════
+   Retina / HiDPI
+   ══════════════════════════════════════════ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  button { border: 0.5px solid rgba(255, 255, 255, 0.06); }
+}
+
+/* ══════════════════════════════════════════
+   Accessibility — reduced motion
+   ══════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  button { transition: none; transform: none !important; }
+}

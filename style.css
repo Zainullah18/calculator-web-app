@@ -1,0 +1,73 @@
+/* ==============================================
+   style.css  —  web-calculator
+   Fits entirely in viewport, zero scrollbar
+   ============================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 95%);
+}
+
+#calculator {
+  font-family: Arial, sans-serif;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 15px;
+  /* Size based on viewport width — buttons will be square */
+  width: min(460px, 90vw);
+  overflow: hidden;
+}
+
+#display {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: clamp(1.6rem, 5vw, 3.5rem);
+  text-align: left;
+  border: none;
+  outline: none;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* NO grid-template-rows — let buttons define height via aspect-ratio */
+  gap: clamp(5px, 1.2vw, 12px);
+  padding: clamp(10px, 2vw, 20px);
+}
+
+button {
+  width: 100%;
+  aspect-ratio: 1 / 1;     /* CIRCLE: height always = width */
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  font-size: clamp(0.9rem, 4vw, 2.8rem);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.12s ease, transform 0.08s ease;
+}
+
+button:hover  { background-color: hsl(0, 0%, 40%); }
+button:active { background-color: hsl(0, 0%, 55%); transform: scale(0.94); }
+
+.operator-btn        { background-color: hsl(35, 100%, 50%); }
+.operator-btn:hover  { background-color: hsl(35, 100%, 60%); }
+.operator-btn:active { background-color: hsl(35, 100%, 70%); transform: scale(0.94); }
